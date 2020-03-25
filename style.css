@@ -1,0 +1,53 @@
+/*
+Theme Name: bhent theme
+Author: Bhent
+Author URI: http://bhent.net
+Description: super theme wordpress
+Version: 1.0.0
+
+*/
+body{
+    background-image: url(./assets/images/1_Arri_Alexa_mini.jpg);
+    opacity: 0,2;
+}
+.pp{
+    color: white;
+}
+.txt{
+    text-decoration-color: white;
+}
+.liens{
+    color: #fff;
+}
+footer {
+    background-color: rgb(194, 194, 194);
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-bottom: 100px;
+}
+footer .col-xs-12 > .inside-widget{
+    background-color: #d8dad8;
+    border-radius: 20px;
+    padding: 2% 5%;
+    min-height: 280px;
+}
+footer .col-xs-12 > .inside-widget h2{
+    margin-top: 12px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+
+.blog-footer{
+    text-align: center;
+    font-size: 1em;
+    padding: 0 10px 20px 0;
+}
+a{
+    text-decoration: none;
+}
+.imgr:hover{
+    scale: 1.1;
+    transition: .5s;
+}
