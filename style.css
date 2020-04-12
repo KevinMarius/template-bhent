@@ -7,11 +7,172 @@ Version: 1.0.0
 
 */
 body{
-    background-image: url(./assets/images/1_Arri_Alexa_mini.jpg);
-    opacity: 0,2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(36, 35, 35);
+}
+a{
+    transition: all .5s;
+    text-decoration: none;
+    color: #fff;
+}
+img{
+    width: 100%;
+    transition: all .5s;
+}
+.txt{
+    background-color: black;
+}
+section{
+    background: rgb(36, 35, 35);
+    text-align: center;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin: 0 15px 0 15px;
+}
+header{
+    width: 70%;
+    margin: 0 auto;
+}
+.paNa{
+  display: flex;
+  justify-content: center;
+}
+.menus li a{
+    text-decoration: none;
+}
+.menus li a:hover{
+    color: rgb(153, 147, 147);
+}
+.sea{
+    position: relative;
+    justify-content: right;
+}
+.icosea{
+    justify-content: center;
+    height: 10%;
+    width: auto;
+}
+.comments-template{ margin: 10px 0 0 0; color: rgb(182, 178, 178); }
+.comments-template ol{ 
+    margin: 10px; 
+    padding: 0 0 0 15px; 
+    list-style: none; 
+}   
+.comments-template ol p{ 
+    font-family: Trebuchet MS, Arial, Hevletica, Sans-serif; font-size: 0.9em; 
+}   
+.comments-template ol li{ 
+    margin: 10px 0 0 0; 
+    line-height: 15px; 
+    padding: 0 0 10px; 
+    color: rgb(182, 178, 178);
+}   
+.comments-template h2, .comments-template h3{ font-size: 1.2em; }   
+.commentmetadata{ font-size: 0.9em; }   
+.comments-template p.nocomments{ padding: 0; }   
+.comments-template textarea{ 
+    font-family: Trebuchet MS, Arial, Hevletica, Sans-serif; 
+    font-size: 0.9em; 
+}   .cadre_commentaires { border-bottom: 1px solid rgb(26, 25, 25); border-top: 1px solid rgb(44, 42, 42); }
+
+header h1{
+    margin: 0;
+    font-size: 50px;
+    color: rgb(248, 246, 246);
+    font-weight: 500;
+}
+.singleBlog{
+    position: relative;
+    overflow: hidden;
+    max-height: 600px;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px rgb(28, 28, 29);
+    transition: all .5s;
+}
+.singleBlog:hover{
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgb(19, 18, 18);
+    transition: all .5s;
+}
+.blogContent{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(51, 48, 48);
+    padding: 10px 5px;
+    background-color: rgb(36, 35, 35);
+}
+.paraph{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e7e2e2;
+}
+.blogContent h3{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 0;
+    color: beige;
+}
+.fixNavigation{
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.blogContent h3 span{
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 500;
+    color: #b3b3b3;
+}
+.blogContent a{
+    font-size: 14px;
+    font-weight: 500;
+    color: #b3b3b3;
+}
+.blogContent .btn{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid rgb(68, 65, 65);
+    border-radius: 3px;
+    font-weight: 400;
+    color: #b3b3b3;
+}
+.blogContent .btn:hover{
+    background: rgb(107, 105, 105);
+    transition: all .5s;
+    color: #000;
+}
+.blogContent a:hover{
+    text-decoration: none;
+}
+.singleBlog:hover img{
+    transform: scale(1.1);
+    transition: all .4s;
 }
 .pp{
-    color: white;
+    color: #6c757d;
+}
+.entete{
+    width: 100%;
+    background-color: rgb(252, 251, 249);
+    box-shadow: 0 0px 10px 0 #b3b3b3;
+}
+.pp a{
+    text-decoration: none;
+    color: black;
 }
 .txt{
     text-decoration-color: white;
@@ -20,34 +181,323 @@ body{
     color: #fff;
 }
 footer {
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(0, 0, 0);
     margin-top: 20px;
     padding-top: 25px;
     padding-bottom: 100px;
 }
 footer .col-xs-12 > .inside-widget{
-    background-color: #d8dad8;
+
     border-radius: 20px;
     padding: 2% 5%;
     min-height: 280px;
+}
+.row a{
+    text-decoration: none;
+}
+.row a:hover{
+    color: rgb(153, 147, 147);
 }
 footer .col-xs-12 > .inside-widget h2{
     margin-top: 12px;
     margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(32, 31, 31);
+    color: #fff;
 }
-
 
 .blog-footer{
     text-align: center;
     font-size: 1em;
     padding: 0 10px 20px 0;
 }
-a{
-    text-decoration: none;
-}
+
 .imgr:hover{
     scale: 1.1;
     transition: .5s;
+}
+.page_item {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+.bh-post{
+    display: flex;
+    justify-content: center;
+}
+.bh-post-image{
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    opacity: 0.7;
+}
+.trai{
+    border-bottom: 2px solid rgb(51, 49, 49);
+    opacity: 0.4;
+}
+.entete{
+    background-image: url(../Bhent1/assets/images/hero-bg.jpg);
+}
+.bhkev-pagina a, .bhkev-pagina span{
+    display: inline block;
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding: 8px 12px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid rgb(73, 71, 71);
+}
+.bhkev-pagina a:hover{
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    transition: all .8s;
+    background-color: rgb(116, 110, 110);
+}
+.bhkev-pagina span.page-numbers.current{
+    padding: 13px 18px;
+    background-color: rgb(27, 25, 25);
+    color: rgb(231, 224, 224);
+}
+#progress{
+	background-color: #ffffff;
+	height: 5px;
+	width: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;  /*Peut être important si vous avez un menu en position fixe */
+}
+.ti-sin-pro {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+.con-sin-pro{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+.ins{
+    display: flex;
+    justify-content: center;
+}
+.desc{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+.au-sin-pro{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+.au-sin-pro a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.img-autho{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+}
+
+a#cRetour{
+    border-radius:3px;
+    padding:10px;
+    font-size:15px;
+    text-align:center;
+    color:rgb(255, 255, 255);
+    background:rgba(241, 241, 241, 0.25);
+    position:fixed;
+    right:20px;
+    opacity:1;
+    z-index:99999;
+    transition:all ease-in 0.2s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    text-decoration: none;
+  }
+  a#cRetour:before{ content: "\25b2"; }
+  a#cRetour:hover{
+    background:rgb(201, 198, 198);
+    transition:all ease-in 0.2s;
+  }
+  a#cRetour.cInvisible{
+    bottom:-35px;
+    opacity:0;
+    transition:all ease-in 0.5s;
+  }
+  
+  a#cRetour.cVisible{
+    bottom:20px;
+    opacity:1;
+  }
+
+
+ .pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+ }
+ 
+ .pace-inactive {
+    display: none;
+ }
+ 
+ .pace .pace-progress {
+    background: #FFFFFF;
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 4px;
+ }
+ 
+ .oldie .pace {
+    display: none;
+ }
+
+ #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #050505;
+    z-index: 800;
+    height: 100%;
+    width: 100%;
+    display: table;
+ }
+ 
+ .no-js #preloader, .oldie #preloader {
+    display: none;
+ }
+ 
+ #loader {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+ }
+ 
+ .line-scale > div:nth-child(1) {
+    -webkit-animation: line-scale 1s -0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+    animation: line-scale 1s -0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+ }
+ 
+ .line-scale > div:nth-child(2) {
+    -webkit-animation: line-scale 1s -0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+    animation: line-scale 1s -0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+ }
+ 
+ .line-scale > div:nth-child(3) {
+    -webkit-animation: line-scale 1s -0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+    animation: line-scale 1s -0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+ }
+ 
+ .line-scale > div:nth-child(4) {
+    -webkit-animation: line-scale 1s -0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+    animation: line-scale 1s -0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+ }
+ 
+ .line-scale > div:nth-child(5) {
+    -webkit-animation: line-scale 1s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+    animation: line-scale 1s 0s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+ }
+ 
+ .line-scale > div {
+    background-color: #fff;
+    width: 4px;
+    height: 35px;
+    border-radius: 2px;
+    margin: 2px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: inline-block;
+ }
+ html.cl-preload .featured {
+    opacity: 0;
+ }
+ html.cl-loaded .featured {
+    animation-duration: 2s;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+ }
+.audio-wrap .mejs__time-loaded{
+   height: 2px;
+}
+ 
+ @-webkit-keyframes line-scale {
+    0% {
+       -webkit-transform: scaley(1);
+       transform: scaley(1);
+    }
+ 
+    50% {
+       -webkit-transform: scaley(0.4);
+       transform: scaley(0.4);
+    }
+ 
+    100% {
+       -webkit-transform: scaley(1);
+       transform: scaley(1);
+    }
+ 
+ }
+ 
+ @keyframes line-scale {
+    0% {
+       -webkit-transform: scaley(1);
+       transform: scaley(1);
+    }
+ 
+    50% {
+       -webkit-transform: scaley(0.4);
+       transform: scaley(0.4);
+    }
+ 
+    100% {
+       -webkit-transform: scaley(1);
+       transform: scaley(1);
+    }
+ 
+ }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+    main{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+    }
+}
+@media (max-width: 550px) {
+    main{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 10px;
+    }
+    header{
+        width: 95px;
+    }
 }

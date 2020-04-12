@@ -1,28 +1,20 @@
 <?php get_header(); ?>
-    
-<section class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2>latest post</h2>
-                </div>
-            </div>
-            <?php if (have_posts()): ?>
-            <div class="row blog-entries">
-                <div class="col-md-12 col-lg-8 main-content">
-                    <div class="row">
-                        <?php while(have_posts()): the_post();?>
-                        <?php get_template_part('content', ); ?>
-                        <?php endwhile; ?>
-                    </div>
-                                                    <!-- END main-content -->
-                </div>
-            </div>
-            <?php else: echo ('aucun resultat'); endif; ?>
-        </div>
-    </section>
-
-
-    <?php get_footer(); ?>
-</body>
-</html>
+<section>
+  <div class="trai entete"><br><br>
+    <header>
+        <h1>Latest post</h1>
+        <p class="paraph">the last post present in this platform</p><br><br>
+    </header>
+  </div><br>
+  <div class="container">
+    <main>
+    <?php if (have_posts()): while(have_posts()): the_post();?>
+        <?php get_template_part('content', ) ?>
+    <?php endwhile; else: echo ('Aucun post disponibles'); endif; ?>
+    </main>
+  </div><br><br>
+    <div class="container paNa"> 
+    <?php require('includes/page-navi.php') ?>
+    </div>
+</section><br>
+<?php get_footer(); ?>

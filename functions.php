@@ -6,9 +6,16 @@ define('VERSION', '1.0.0');
 function bhkev_scripts() {
     wp_enqueue_script('bhkev_bootstrap_bundle_js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array('jquery'), VERSION, false );
     wp_enqueue_style('bhkev_bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', VERSION, '1.0.0', 'all' );
+    wp_enqueue_style('bhkev_font-awesome.min', get_template_directory_uri() . '/assets/fontawesome-free-5.13.0-web/css/all.min.css', VERSION, '1.0.0', 'all' );
+    wp_enqueue_style('bhkev_solid.min', get_template_directory_uri() . '/assets/css/solid.min.css', VERSION, '1.0.0', 'all' );
+    wp_enqueue_style('bhkev_brands.min', get_template_directory_uri() . '/assets/css/brands.min.css', VERSION, '1.0.0', 'all' );
     wp_enqueue_style('bhkev_style', get_template_directory_uri() . '/style.css', array('bhkev_bootstrap'), VERSION, 'all' );
     wp_enqueue_script('bhkev_bootstrap_js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), VERSION, false );
     wp_enqueue_script('bhkev_jquery_js', get_template_directory_uri() . '/assets/js/jquery-3.3.1.slim.min.js', array('jquery'), VERSION, false );
+    wp_enqueue_script('bhkev_scrip_js', get_template_directory_uri() . '/assets/js/scripts.js', array(), VERSION, false );
+    wp_enqueue_script('bhkev_pace_js', get_template_directory_uri() . '/assets/js/pace.min.js', array('jquery'), VERSION, false );
+    wp_enqueue_script('bhkev_plugins_js', get_template_directory_uri() . '/assets/js/plugins.js', array('jquery'), VERSION, false );
+
 }
 add_action('wp_enqueue_scripts', 'bhkev_scripts');
 
@@ -24,7 +31,7 @@ add_action('admin_init', 'bhkev_admin_init');
 //--------------------utilitaires  ---------------------------------------
 
 function bhkev_setup() {
-    add_theme_support('thumbnails');
+    add_theme_support('post-thumbnails');
     //------ enleve le generateur de version----
     remove_action('wp_head', 'wp_generator');
 
@@ -34,7 +41,7 @@ function bhkev_setup() {
     //---------acvtive la gestion des menu-----------------------
     register_nav_menus(array('primary' => 'principal'));
     //------- inclusion du fichier pour cooperer avec bootstrap----
-    require_once('includes/wp_bootstrap_navwalker.php');
+    //require_once('includes/wp_bootstrap_navwalker.php');
     //----- affiche et customisation du logo
     add_theme_support( 'custom-logo' , array(
 		'height'		=>45,	

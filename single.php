@@ -1,40 +1,40 @@
 <?php get_header(); ?>
-<section class="main">
+    <?php if($thumbnail_html = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail')) :
+    $thumbnail_src = $thumbnail_html['0'];?><br>
+<header class="bh-post">
+    <img src="<?php echo $thumbnail_src; ?>" alt="" class="figure img-responsive col-md-10 bh-post-image">
+        <?php endif; ?>
         <div class="container">
+        <br><br>
             <div class="row">
-                <div class="col-sm-6">
-                <h2 class="mb-4"><?php the_title(); ?></h2>
-                </div>
+                <div class="col-md-10 ti-sin-pro"><strong><?php the_title(); ?></strong></div>
             </div>
-            <?php if (have_posts()): ?>
-            <div class="row blog-entries">
-                <div class="col-md-12 col-lg-8 main-content">
-                    <div class="row">
-                        <?php while(have_posts()): the_post();?>
-                        <div class="col-ml-2" style="width: 24rem; height:38rem">
-                            <?php if($thumbnail_html = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail')) :
-                                    $thumbnail_src = $thumbnail_html['0'];
-                                    ?>
-                                <img class="img-responsive img-thumbnail" class="col-xs-2" src="<?php echo $thumbnail_src; ?>" alt="">
-                            <?php endif; ?>
-                                <div class="blog-content-body">
-                                    <div class="post-meta">
-                                        <span class="mr-2 pp"><?php echo bhkev_give_me_meta(esc_attr(get_the_date('c')), esc_html(get_the_date()), get_the_category_list(' , '), get_the_tag_list('', ' , ')) ?></span> &bullet;
-                                        <span class="mr-2 pp"><p ><?php the_content(); ?></p> </span>
-                                    </div>
-                                    <h2><?php the_title(); ?></h2>
-                                </div>
-                        </div>
-                        <?php endwhile; ?>
-                    </div>
-                                                    <!-- END main-content -->
-                </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-10 con-sin-pro"><strong><?php the_excerpt(); ?></strong></div>
             </div>
-            <?php else: echo ('aucun resultat'); endif; ?>
+            <br><br><br>
+            <div class="row">
+                <div class="col-md-12 au-sin-pro">publie par <strong><a href="<?php the_permalink(); ?>"><img class="img-autho" src="<?php bloginfo('template_directory');?>/assets/images/author-40.png" alt="">  <?php the_post(); the_author(); ?></a></strong> | le <strong><?php echo get_the_date(); ?></strong> | <strong><a href="<?php the_permalink(); ?>"><?php echo get_the_category_list(', '); ?></a></strong></div>
+            </div>
         </div>
-    </section>
+    </figure>
+</header>
+<section><br><br><br><br><br>
+    <div class="container">
+        <div class="row ins">
+            <div class="col-md-10 desc">
+                <span>
+                    <?php the_content(); ?>
+                </span>
+            </div>
+        </div>
+    </div><br>
+    <div class="container">
+        <div class="comments-template"> <?php comments_template(); ?> </div>
+    </div>
+</section>
 
-
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
 </body>
 </html>
